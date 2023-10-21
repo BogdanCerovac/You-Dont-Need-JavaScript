@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Native HTML dialog opened on page load, no JS needed</title>
+    <style>
+       body{
+  position:relative;
+         font-family:sans-serif;
+}
+
+dialog {
+  margin: 1rem auto;
+  padding: 2rem;
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+   border-radius: .5rem;
+  box-shadow: 0 0 2px;
+  width:90%;
+}
+    </style>
+</head>
+<body>
+   <main>
+  <h1>
+  Native HTML dialog opened on page load, no JS needed
+  </h1>
+  
+  <p>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog">Check MDN dialog page</a> for more details. Eventually you will need some JavaScript if you will want more features, but if you need to show a dialog on load then this can be the solution.
+  </p>
+  <p>
+  For example cookie consent or some kind of warning that needs to be triggered on page load...
+  </p>
+</main>
+
+<dialog open>
+  <p>Warning!!!</p>
+  <form method="dialog">
+    <button autofocus>OK</button><!-- autofocus doesn't work if in iframe -->
+  </form>
+</dialog>
+
+</body>
+</html>
